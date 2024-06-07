@@ -1,10 +1,12 @@
 import psycopg2
 
-DB_NAME = "kubsu"
-DB_USER = "kubsu"
-DB_PASSWORD = "kubsu"
-DB_HOST = "127.0.0.1"
+
+DB_NAME = os.environ.get("DB_NAME", "kubsu")
+DB_USER = os.environ.get("DB_USER", "kubsu")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "kubsu")
+DB_HOST = os.environ.get("DB_HOST", "localhost")
 DB_PORT = "5432"
+
 
 def fetch_users():
     try:
