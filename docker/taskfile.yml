@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  run:
+    cmds:
+      - docker-compose up --build
+    desc: "Start the application with Docker"
+  test:
+    cmds:
+      - export PYTHONPATH=. && pytest
+    desc: "Run tests"
